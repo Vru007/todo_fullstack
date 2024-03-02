@@ -24,7 +24,10 @@ const userSchema= new Schema({
         type:String,
         required:true,
         minLength:6
-    }
+    },
+    todos:[{
+        type:mongoose.Schema.ObjectId
+    }]
 
 })
 const User=mongoose.model('User',userSchema);
