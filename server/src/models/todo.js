@@ -14,7 +14,7 @@ const todoSchmea=new Schema({
     isCompleted:{
         type:Boolean,
         default:false,
-        required:true,
+        // required:true,
 
     },
     date:{

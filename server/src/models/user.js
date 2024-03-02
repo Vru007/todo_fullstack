@@ -26,7 +26,9 @@ const userSchema= new Schema({
         minLength:6
     },
     todos:[{
-        type:mongoose.Schema.ObjectId
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Todo",
+
     }]
 
 })

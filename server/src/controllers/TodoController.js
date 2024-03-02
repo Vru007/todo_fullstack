@@ -22,11 +22,14 @@ const createTodo =async (req,res)=>{
             const user=await User.findOneAndUpdate({_id:req.userId},
                 {
                    $push:{todos:result},
-                })
+                });
+
+            return res.json(jsonGenerate(StatusCode.SUCCESS,"Todo created",result));
+            
         }
     }
     catch(error){
-        return res.json(jsonGenerate(StatusCode.UNPROCESSABLE_ERROR,"Something went wrong",error.mapped()));
+        return res.json(jsonGenerate(StatusCode.UNPROCESSABLE_ERROR,"Something went wrong",error));
     }
 }
 
