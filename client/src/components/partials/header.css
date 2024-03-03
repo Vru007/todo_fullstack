@@ -1,0 +1,11 @@
+.headerContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    justify-content: space-between;
+}
+.headerComponents{
+    
+    margin:2rem;
+
+}
